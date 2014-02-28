@@ -12,7 +12,7 @@ $text2 = <<<EOF
 Comment \|| allez vous ?
 EOF;
 	//echo countWordsByRow($text);
-	return (3 == countWordsByRow($text));
+	return (3 == countWordsByRow($text2));
 }
 
 var_dump(tester_compter_nbr_mots_ligne());
