@@ -1,38 +1,18 @@
 <?php 
 
-/*function testCountWordsByRow(){
-	$string = "Salut les gens";
-	$count = countWordsByRow($string);
-	if ($count == 3)
-		return "Oui";
-	else
-		return "Non";
-}
+require('functions.php');
 
-$res = testCountWordsByRow();
-echo $res;
-*/
-
-function countWordsByRow($string)
-{
-	$string = str_replace("'",' ',$string);
-	$string = str_replace("?",' ',$string);
-	$string = str_replace(".",' ',$string);
-	$string = str_replace("!",' ',$string);
-	$string = str_replace(",",' ',$string);
-
-	$string = preg_replace("/\s+/"," ",$string);
-	trim($string);
-	$array = explode(" ",$string);
-	return count($array);
-}
 function tester_compter_nbr_mots_ligne(){
 	$text = <<<EOF
 Salut les gens \n
 l'extreme programming est cool !
 EOF;
+
+$text2 = <<<EOF
+Comment \|| allez vous ?
+EOF;
 	//echo countWordsByRow($text);
-	return (7 == countWordsByRow($text));
+	return (3 == countWordsByRow($text));
 }
 
 var_dump(tester_compter_nbr_mots_ligne());
