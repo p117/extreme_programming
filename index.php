@@ -18,7 +18,8 @@ EOF;
 var_dump(tester_compter_nbr_mots_ligne());
 
 if (isset($_POST['chaine']) && !empty($_POST['chaine'])){
-	echo 'La chaine de la textarea comporte ' . countWordsByRow($_POST['chaine']) . ' mots.';
+	echo 'La chaine de la textarea comporte ' . countWordsByRow($_POST['chaine']) . ' mot';
+	if (countWordsByRow($_POST['chaine']) > 1) echo 's';
 }
 
 ?>
