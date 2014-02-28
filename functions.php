@@ -20,6 +20,7 @@ function countWords($file)
 
 function countWordsByRow($string)
 {
+	$string = mysql_real_escape_string($string);
 	$string = str_replace("'",' ',$string);
 	$string = str_replace("?",' ',$string);
 	$string = str_replace(".",' ',$string);
@@ -27,7 +28,7 @@ function countWordsByRow($string)
 	$string = str_replace(",",' ',$string);
 
 	$string = preg_replace("/\s+/"," ",$string);
-	trim($string);
+	$string = trim($string);
 	$array = explode(" ",$string);
 	return count($array);
 }
