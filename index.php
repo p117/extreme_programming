@@ -15,11 +15,11 @@ echo $res;
 
 function countWordsByRow($string)
 {
-	$string = str_replace("'"," ",$string);
-	$string = str_replace("?"," ",$string);
-	$string = str_replace("."," ",$string);
-	$string = str_replace("!"," ",$string);
-	$string = str_replace(","," ",$string);
+	$string = str_replace("'",' ',$string);
+	$string = str_replace("?",' ',$string);
+	$string = str_replace(".",' ',$string);
+	$string = str_replace("!",' ',$string);
+	$string = str_replace(",",' ',$string);
 
 	$string = preg_replace("/\s+/"," ",$string);
 	trim($string);
