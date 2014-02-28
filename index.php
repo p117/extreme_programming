@@ -26,8 +26,7 @@ Function tester_compter_nbr_mots_ligne(){
 Salut les gens \n
 l'extreme programming est cool !
 EOF;
-
-	//return (3 == countWordsByRow("Salut les gens"));
+	//echo countWordsByRow($text);
 	return (7 == countWordsByRow($text));
 }
 
