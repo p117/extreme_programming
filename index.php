@@ -15,13 +15,18 @@ echo $res;
 
 function countWordsByRow($string)
 {
-    $string = preg_replace("/\s+/"," ",$string);
-    $string = trim($string);
-    $array = explode(" ",$string);
-    return count($array);
-}
+	$string = str_replace("'"," ",$string);
+	$string = str_replace("?"," ",$string);
+	$string = str_replace("."," ",$string);
+	$string = str_replace("!"," ",$string);
+	$string = str_replace(","," ",$string);
 
-Function tester_compter_nbr_mots_ligne(){
+	$string = preg_replace("/\s+/"," ",$string);
+	trim($string);
+	$array = explode(" ",$string);
+	return count($array);
+}
+function tester_compter_nbr_mots_ligne(){
 	$text = <<<EOF
 Salut les gens \n
 l'extreme programming est cool !

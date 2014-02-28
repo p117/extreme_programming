@@ -20,13 +20,12 @@ function countWords($file)
 
 function countWordsByRow($string)
 {
-	/*$string = str_replace("'"," ",$string);
+	$string = str_replace("'"," ",$string);
 	$string = str_replace("?"," ",$string);
 	$string = str_replace("."," ",$string);
 	$string = str_replace("!"," ",$string);
-	$string = str_replace(","," ",$string);*/
+	$string = str_replace(","," ",$string);
 
-	$string = preg_replace("/(('+)|(-+)|(\?+)|(!+)|(\.+)|(,+)|\\n)/"," ",$string);
 	$string = preg_replace("/\s+/"," ",$string);
 	trim($string);
 	$array = explode(" ",$string);
